@@ -84,8 +84,8 @@ a {
   content: "";
   position: absolute;
   inset: 0 calc(50% - 50vw) 0 auto;
-  width: min(990px, 72vw);
-  background: url("assets/ministry-harbor-background.jpg") right bottom / contain no-repeat;
+  width: min(960px, 72vw);
+  background: url("assets/ministry-harbor-background.jpg") right center / contain no-repeat;
   opacity: 0.88;
   pointer-events: none;
 }
@@ -276,26 +276,6 @@ h2 {
     min-height: 72px;
   }
 
-  .hero {
-    min-height: auto;
-    padding: 300px 0 54px;
-  }
-
-  .hero::before {
-    inset: 0 calc(50% - 50vw) auto;
-    width: 100vw;
-    height: 320px;
-    background-size: cover;
-    background-position: center top;
-    opacity: 0.86;
-  }
-
-  .hero::after {
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 300px, #ffffff 100%),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.18));
-  }
-
   h1 {
     max-width: 11ch;
   }
@@ -313,6 +293,28 @@ h2 {
   .purpose-icon {
     width: 88px;
     height: 88px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: auto;
+    padding: clamp(270px, 48vw, 330px) 0 54px;
+  }
+
+  .hero::before {
+    inset: 0 calc(50% - 50vw) auto;
+    width: 100vw;
+    height: clamp(230px, 58vw, 320px);
+    background-size: contain;
+    background-position: right top;
+    opacity: 0.86;
+  }
+
+  .hero::after {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff clamp(245px, 50vw, 320px), #ffffff 100%),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.18));
   }
 }
 
