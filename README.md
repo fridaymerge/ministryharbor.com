@@ -13,6 +13,7 @@ partner church details, internal planning notes, or private issue content here.
 - `styles.css` - responsive styling
 - `404.html` - static not-found page for GitHub Pages
 - `CNAME` - custom domain configuration for `ministryharbor.com`
+- `.nojekyll` - disables Jekyll processing for this static site
 - `assets/ministry-harbor-hero.jpg` - generated public hero artwork
 
 ## GitHub Pages
